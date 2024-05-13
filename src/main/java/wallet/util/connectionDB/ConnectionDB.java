@@ -1,9 +1,6 @@
 package wallet.util.connectionDB;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ConnectionDB {
     private Connection conn;
@@ -12,26 +9,33 @@ public class ConnectionDB {
 
     protected void connectDb() {
         try {
+            // Cargar el driver de JSBC para MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String stringConnection = "jdbc:mysql://localhost:3306/wallet";
+            // Establecer la conexión con la base de datos
+            String url = "jdbc:mysql://localhost:3306/wallet_personal";
             String user = "root";
-            String pass = "root";
-            Statement DriverManager;
-            conn = DriverManager.getConnection();
+            String pass = "HelloLoreto54%";
+            // Establecer la conexión con la base de datos
+           // Statement DriverManager;
+            conn = DriverManager.getConnection(url, user, pass);
             System.out.println("Connection established");
         } catch (ClassNotFoundException ex) {
-            System.out.println("Connection failed");
+            System.out.println("Driver not found");
         } catch (SQLException e) {
             System.out.println("Connection failed");
-            System.out.println("SQLExecption" + e.getMessage());
+            System.out.println("Connection failed" + e.getMessage());
             System.out.println("SQLState" + e.getSQLState());
             System.out.println("VendorError" + e.getErrorCode());
         }
     }
 
     protected ResultSet consultar(String sql) {
+        if (conn == null) {
+            System.out.println("Connection is not established");
+            return null;
+        }
         try {
-            this.stmt = conn.createStatement();
+            stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             return rs;
         } catch (SQLException e) {
