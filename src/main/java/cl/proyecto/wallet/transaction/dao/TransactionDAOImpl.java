@@ -1,7 +1,6 @@
-package cl.proyecto.wallet.transaction.dao.impl;
+package cl.proyecto.wallet.transaction.dao;
 
 import cl.proyecto.wallet.shared.ConnectionDB;
-import cl.proyecto.wallet.transaction.dao.TransactionDAO;
 import cl.proyecto.wallet.transaction.model.Transaction;
 
 
@@ -11,17 +10,18 @@ public class TransactionDAOImpl extends ConnectionDB implements TransactionDAO {
 
 
     @Override
-    public boolean deposit(Transaction transaction, double montoDeposit ) {
+    public boolean deposit(int userId, Transaction transaction, double depositAmount ) {
         try {
             int id = transaction.getTransactionId();
             double amount = transaction.getAmount();
             String transactionType = transaction.getTransactionType();
             String transactionDate = transaction.getTransactionDate();
 
-            String queryDeposit = "Update transactions set amount = amount + " + montoDeposit  ;
-            String query = "INSERT INTO transactions (amount, transaction_type, transaction_date)" +
-                    "VALUES (" + montoDeposit + ",'" + transactionType + "','" + transactionDate + "')";
-            int resultModi = modificarDb(query);
+            String queryDeposit = "START TRANSACTION;" + "Update transactions set amount = amount + "
+                    + depositAmount + " WHERE user_Id= "+userId+" ;"
+                    + "INSERT INTO transactions (amount, transaction_type, transaction_date)" +
+                    "VALUES (" + depositAmount + ",'" + transactionType + "','" + transactionDate + "')";
+            int resultModi = modificarDb(queryDeposit);
             boolean result = resultModi > 0;
             return result;
         } catch (Exception e) {
@@ -32,7 +32,7 @@ public class TransactionDAOImpl extends ConnectionDB implements TransactionDAO {
 
 
     @Override
-    public void withdraw(int userId, double amount) {
+    public void withdraw(int userId, Transaction transaction, double withdrawalAmount) {
 
     }
 
