@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>Wallet Personal</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="./assets/css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+
     </head>
     <body class="d-flex flex-column min-vh-100">
         <header class="row">
@@ -19,9 +19,9 @@
                     <p class="text-center mt-5">Tu aplicación confiable para gestionar transacciones financieras de manera
                         segura y eficiente.</p>
                     <div class="row justify-content-center">
-                        <form action="deposit" method="get">
-                            <button type="submit">Iniciar Sesión</button>
-                        </form>
+                        <a href="view/deposit.jsp" class="btn btn-primary">Depositar</a>
+                        <a href="view/withdraw.jsp" class="btn btn-secondary ms-2">Retirar</a>
+                        <a href="transaction" class="btn btn-info ms-2">Ver Saldo</a>
                     </div>
                 </div>
             </div>
