@@ -10,30 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="355ec4ee-875b-49bf-b0ad-de17683dec5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/WhitdrawController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/dao/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/DepositController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/impl/TransactionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/depositar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/deposit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +32,17 @@
     &quot;accountId&quot;: &quot;0ef9683f-d366-4821-8cf1-54f010d19e1f&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -74,8 +58,13 @@
     "Smart Tomcat.Unnamed.executor": "Run",
     "Tomcat Server.Tomcat 10.1.20.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Desktop/WalletPersonal2/WalletPersonal2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -113,7 +102,7 @@
       <deployment>
         <artifact name="wallet:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/wallet_war" />
+            <option name="CONTEXT_PATH" value="/wallet" />
           </settings>
         </artifact>
       </deployment>
@@ -213,6 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716389655343</updated>
       <workItem from="1716407119330" duration="167000" />
+      <workItem from="1716429084268" duration="1137000" />
     </task>
     <servers />
   </component>
