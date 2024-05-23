@@ -23,7 +23,7 @@ public class TransactionController extends HttpServlet{
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("balance.jsp").forward(request, response);
+        request.getRequestDispatcher("/view/balance.jsp").forward(request, response);
     }
 }
 

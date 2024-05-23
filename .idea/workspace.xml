@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="355ec4ee-875b-49bf-b0ad-de17683dec5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/balance.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/withdraw.jsp" afterDir="false" />
+    <list default="true" id="355ec4ee-875b-49bf-b0ad-de17683dec5a" name="Changes" comment="Actualizacion. Controller y modificacion de archivos jsp+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/deposit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/deposit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/whitdraw.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/balance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/balance.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,11 +213,36 @@
       <updated>1716389655343</updated>
       <workItem from="1716407119330" duration="167000" />
       <workItem from="1716429084268" duration="1137000" />
-      <workItem from="1716478500117" duration="4356000" />
+      <workItem from="1716478500117" duration="7807000" />
     </task>
+    <task id="LOCAL-00001" summary="Actualizacion. Controller y modificacion de archivos jsp+">
+      <option name="closed" value="true" />
+      <created>1716483581411</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716483581411</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actualizacion" />
+    <MESSAGE value="Actualizacion. Controller y modificacion de archivos jsp+" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion. Controller y modificacion de archivos jsp+" />
   </component>
 </project>

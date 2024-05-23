@@ -8,7 +8,7 @@
           rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css"/>
 </head>
 <body class="d-flex flex-column min-vh-100">
 <header class="row mt-3">
@@ -29,17 +29,22 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="transaction" items="${transactions}">
-                    <tr>
-                        <td>${transaction.transactionId}</td>
-                        <td>${transaction.amount}</td>
-                        <td>${transaction.transactionDate}</td>
-                        <td>${transaction.transactionType}</td>
-                    </tr>
-                </c:forEach>
+                <!-- Datos de ejemplo -->
+                <tr>
+                    <td>1</td>
+                    <td>100.00</td>
+                    <td>2023-01-01</td>
+                    <td>Deposito</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>50.00</td>
+                    <td>2023-01-02</td>
+                    <td>Retiro</td>
+                </tr>
                 </tbody>
             </table>
-            <a href="../index.jsp" class="btn btn-primary">Volver</a>
+            <a href="${pageContext.request.contextPath}/index.jsp" class="btn btn-primary">Volver</a>
         </div>
     </div>
 </div>
@@ -50,4 +55,5 @@
 </footer>
 </body>
 </html>
+
 
