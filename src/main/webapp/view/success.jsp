@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
+    <title>Éxito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
@@ -17,18 +17,11 @@
 <div class="container">
     <div class="container-main row justify-content-center">
         <div class="col-md-6">
-            <h2 class="text-center mt-5">Iniciar Sesión</h2>
-            <form action="${pageContext.request.contextPath}/login" method="post">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña:</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-            </form>
+            <h2 class="text-center mt-5">Usuario Creado Exitosamente</h2>
+            <p class="text-center mt-5">Tu cuenta ha sido creada. Ahora puedes iniciar sesión.</p>
+            <div class="row justify-content-center">
+                <a href="${pageContext.request.contextPath}/view/login.jsp" class="btn btn-primary">Iniciar Sesión</a>
+            </div>
         </div>
     </div>
 </div>
@@ -39,4 +32,3 @@
 </footer>
 </body>
 </html>
-

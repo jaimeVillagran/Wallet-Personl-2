@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
+    <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
@@ -17,18 +17,13 @@
 <div class="container">
     <div class="container-main row justify-content-center">
         <div class="col-md-6">
-            <h2 class="text-center mt-5">Iniciar Sesión</h2>
-            <form action="${pageContext.request.contextPath}/login" method="post">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña:</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-            </form>
+            <h2 class="text-center mt-5">Panel de Control</h2>
+            <p class="text-center mt-5">Selecciona una opción para gestionar tus fondos.</p>
+            <div class="row justify-content-center">
+                <a href="deposit.jsp" class="btn btn-primary">Depositar</a>
+                <a href="withdraw.jsp" class="btn btn-secondary ms-2">Retirar</a>
+                <a href="../transaction" class="btn btn-info ms-2">Ver Saldo</a>
+            </div>
         </div>
     </div>
 </div>
