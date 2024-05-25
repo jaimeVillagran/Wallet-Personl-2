@@ -3,6 +3,13 @@ package cl.proyecto.wallet.user.dao;
 import cl.proyecto.wallet.user.model.User;
 
 public interface UserDAO {
+    User getUserById(int id);
+    User getUserByEmail(String email);
+    boolean insertUser(User user);
 
-    public boolean getUser();
+    boolean updateUser(User user);
+
+    boolean deleteUser(int id);
+    /*boolean updateUser(User user);
+    boolean deleteUser(int id);*/
 }

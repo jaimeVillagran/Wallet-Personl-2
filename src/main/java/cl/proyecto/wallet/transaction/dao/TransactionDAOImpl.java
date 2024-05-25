@@ -21,7 +21,7 @@ public class TransactionDAOImpl extends ConnectionDB implements TransactionDAO {
                     + depositAmount + " WHERE user_Id= "+userId+" ;"
                     + "INSERT INTO transactions (amount, transaction_type, transaction_date)" +
                     "VALUES (" + depositAmount + ",'" + transactionType + "','" + transactionDate + "')";
-            int resultModi = modificarDb(queryDeposit);
+            int resultModi = modifyDb(queryDeposit);
             boolean result = resultModi > 0;
             return result;
         } catch (Exception e) {
@@ -50,4 +50,9 @@ public class TransactionDAOImpl extends ConnectionDB implements TransactionDAO {
     public double convertCurrency(double amount) {
         return 0;
     }
+
+    /*@Override
+    protected void conectDb() {
+        super.connectDb();
+    }*/
 }

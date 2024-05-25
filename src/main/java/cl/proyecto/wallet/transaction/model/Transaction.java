@@ -15,10 +15,10 @@ package cl.proyecto.wallet.transaction.model;
 public class Transaction {
 
     private int transactionId; // The unique ID of the transaction
+    private int userId;
     private double amount; // The amount involved in the transaction
     private String transactionType; // The type of the transaction
     private String transactionDate;// The date of the transaction
-    private int idUser;
 
     /**
      * Default constructor for the Transaction class.
@@ -29,14 +29,22 @@ public class Transaction {
 
     public Transaction(int transactionId, double amount, String transactionType, String transactionDate, int idUser) {
         this.transactionId = transactionId;
+        this.userId = idUser;
         this.amount = amount;
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
-        this.idUser = idUser;
     }
 
     public int getTransactionId() {
         return transactionId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public void setTransactionId(int transactionId) {
@@ -66,13 +74,4 @@ public class Transaction {
     public void setTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
     }
-
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
-    }
-
 }
