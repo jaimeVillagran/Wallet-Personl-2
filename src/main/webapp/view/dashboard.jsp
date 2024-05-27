@@ -17,12 +17,14 @@
 <div class="container">
     <div class="container-main row justify-content-center">
         <div class="col-md-6">
-            <h2 class="text-center mt-5">Panel de Control</h2>
+            <h2 class="text-center mt-5">Panel de Control</h2>Estas
             <p class="text-center mt-5">Selecciona una opción para gestionar tus fondos.</p>
             <div class="row justify-content-center">
                 <a href="deposit.jsp" class="btn btn-primary">Depositar</a>
                 <a href="withdraw.jsp" class="btn btn-secondary ms-2">Retirar</a>
-                <a href="../transaction" class="btn btn-info ms-2">Ver Saldo</a>
+                <c:if test="${not empty sessionScope.user}">
+                    <a href="${pageContext.request.contextPath}/transaction?user_id=${sessionScope.user.id}" class="btn btn-info ms-2">Ver Saldo</a>
+                </c:if>
             </div>
         </div>
     </div>
@@ -34,4 +36,3 @@
 </footer>
 </body>
 </html>
-
