@@ -13,7 +13,6 @@ package cl.proyecto.wallet.transaction.model;
  * It has two constructors and getter and setter methods for all the attributes.
  */
 public class Transaction {
-
     private int transactionId; // The unique ID of the transaction
     private int userId;
     private double amount; // The amount involved in the transaction
@@ -29,14 +28,27 @@ public class Transaction {
 
     public Transaction(int transactionId, double amount, String transactionType, String transactionDate, int idUser) {
         this.transactionId = transactionId;
-        this.userId = idUser;
+        this.userId = userId;
         this.amount = amount;
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
     }
 
+    // Constructor with necessary parameters for creating a transaction
+    public Transaction(int userId, double amount, String transactionType) {
+        this.userId = userId;
+        this.amount = amount;
+        this.transactionType = transactionType;
+    }
+
+
+    // Getters and setters
     public int getTransactionId() {
         return transactionId;
+    }
+
+    public void setTransactionId(int transactionId) {
+        this.transactionId = transactionId;
     }
 
     public int getUserId() {
@@ -45,10 +57,6 @@ public class Transaction {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public void setTransactionId(int transactionId) {
-        this.transactionId = transactionId;
     }
 
     public double getAmount() {

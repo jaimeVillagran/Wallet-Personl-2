@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +21,7 @@
         <div class="col-md-8">
             <h2 class="text-center mt-5">Saldo y Transacciones</h2>
             <p class="text-center mt-5">Aquí se mostrarán las transacciones y el saldo.</p>
+            <h3 class="text-center">Saldo: ${totalBalance}</h3>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -29,22 +32,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!-- Datos de ejemplo -->
-                <tr>
-                    <td>1</td>
-                    <td>100.00</td>
-                    <td>2023-01-01</td>
-                    <td>Deposito</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>50.00</td>
-                    <td>2023-01-02</td>
-                    <td>Retiro</td>
-                </tr>
+                <c:forEach var="transaction" items="${transactions}">
+                    <tr>
+                        <td>${transaction.transactionId}</td>
+                        <td>${transaction.amount}</td>
+                        <td>${transaction.transactionDate}</td>
+                        <td>${transaction.transactionType}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
-            <a href="${pageContext.request.contextPath}/index.jsp" class="btn btn-primary">Volver</a>
+            <a href="${pageContext.request.contextPath}/view/dashboard.jsp" class="btn btn-primary">Volver</a>
         </div>
     </div>
 </div>
@@ -55,5 +53,3 @@
 </footer>
 </body>
 </html>
-
-

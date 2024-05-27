@@ -1,7 +1,7 @@
 package cl.proyecto.wallet.user.model;
 
 public class User {
-private int id;
+    private int id;
     private String firstname;
     private String lastname;
     private String email;

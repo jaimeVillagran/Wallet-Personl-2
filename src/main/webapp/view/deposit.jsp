@@ -20,14 +20,15 @@
             <p class="text-center mt-5">Tu aplicación confiable para
                 gestionar transacciones financieras de manera segura y eficiente.</p>
             <div class="row justify-content-center">
-				<form action="transaction" method="post">
-					<input type="hidden" name="type" value="deposit">
-					<div class="mb-3">
-						<label for="amount" class="form-label">Monto:</label>
-						<input type="text" id="amount" name="amount" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-primary">Depositar</button>
-				</form>
+                <form action="${pageContext.request.contextPath}/transaction" method="post">
+                    <input type="hidden" name="user_id" value="${sessionScope.user.id}">
+                    <input type="hidden" name="type" value="deposit">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Monto:</label>
+                        <input type="text" id="amount" name="amount" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Depositar</button>
+                </form>
             </div>
         </div>
     </div>

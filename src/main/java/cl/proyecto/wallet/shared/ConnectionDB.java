@@ -16,7 +16,7 @@ import java.sql.SQLException;
  * - rs: a ResultSet object that stores the result of a database query.
  * - stmt: a Statement object used to execute SQL commands.
  */
-public class ConnectionDB {
+public abstract class ConnectionDB {
     protected Connection conn; // The database connection
     protected ResultSet rs; // The result set of a database query
     protected Statement stmt; // The statement for executing SQL commands
@@ -67,59 +67,58 @@ public class ConnectionDB {
     protected ResultSet consultDb(String query) {
         connectDb();
         try {
+            //Esto deberia ser ejecutado aqui y no en el "DAOImpl" TransacctionDOAImpl
+            //connectDb();
             this.stmt = conn.createStatement(); // Create a Statement object
-           /* this.rs = stmt.executeQuery(query); // Execute the query and get the ResultSet
-             close(); // Close the database resources*/
-           /* return rs; // Return the ResultSet*/
-            return stmt.executeQuery(query);
-    } catch(SQLException ex){
-        System.out.println(ex.getMessage()); // Print the error message
-        return null; // Return null if an error occurred
+            rs = stmt.executeQuery(query); // Execute the query and get the ResultSet
+            return rs; // Return the ResultSet*/
+            /* return stmt.executeQuery(query);*/
+        } catch (SQLException ex) {
+            System.out.println("Error en consultDb: " + ex);
+            return null; // Return null if an error occurred
+        }
     }
-}
 
-/**
- * This method is used to modify the database with the provided SQL query.
- * It first establishes a connection to the database, then creates a Statement object.
- * The Statement object is used to execute the SQL query, which modifies the database.
- * The number of modified records is returned.
- * If an SQLException occurs during this process, an error message is printed and 0 is returned.
- *
- * @param query The SQL query to be executed.
- * @return The number of records modified by the query.
- */
-protected int modifyDb(String query) {
-    connectDb(); //
-    try {
-        /* Connect to the database*/
-        this.stmt = conn.createStatement(); // Create a Statement object
-        /*int regModificados = stmt.executeUpdate(query); // Execute the query and get the number of modified records*/
-        /*close(); // Close the database resources*/
-        return stmt.executeUpdate(query); // Return the number of modified records
-    } catch (SQLException ex) {
-        System.out.println(ex.getMessage()); // Print the error message
-        return 0; // Return 0 if an error occurred
-        /*} finally {
-            close();*/
+    /**
+     * This method is used to modify the database with the provided SQL query.
+     * It first establishes a connection to the database, then creates a Statement object.
+     * The Statement object is used to execute the SQL query, which modifies the database.
+     * The number of modified records is returned.
+     * If an SQLException occurs during this process, an error message is printed and 0 is returned.
+     *
+     * @param query The SQL query to be executed.
+     * @return The number of records modified by the query.
+     */
+    protected int modifyDb(String query) {
+        connectDb();
+        try {
+            this.stmt = conn.createStatement(); // Create a Statement object
+            return stmt.executeUpdate(query); // Return the number of modified records
+        } catch (SQLException ex) {
+            System.out.println("Error en modifyDb: " + ex);
+            return 0;
+        }
     }
-}
 
-protected void close() {
-    try {
-        // If ResultSet is not null, close it
-        if (rs != null && !rs.isClosed()) {
-            rs.close();
+    // Método unificado `close`
+    protected void close(ResultSet rs, Statement stmt, Connection conn) {
+        try {
+            if (rs != null && !rs.isClosed()) {
+                rs.close();
+            }
+            if (stmt != null && !stmt.isClosed()) {
+                stmt.close();
+            }
+            if (conn != null && !conn.isClosed()) {
+                conn.close();
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al cerrar la conexión: " + ex);
         }
-        if (stmt != null && !stmt.isClosed()) {
-            stmt.close();
-        }
-        // If Connection is not null, close it
-        if (conn != null && !conn.isClosed()) {
-            conn.close();
-        }
-    } catch (SQLException ex) {
-        // Print the error if the connection cannot be closed
-        System.out.println("Error al cerrar la conexión: " + ex);
     }
-}
+
+    // Sobrecarga del método `close` para usar los atributos de la clase
+    protected void close() {
+        close(this.rs, this.stmt, this.conn);
+    }
 }

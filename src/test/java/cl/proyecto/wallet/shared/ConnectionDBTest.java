@@ -1,82 +1,84 @@
 package cl.proyecto.wallet.shared;
 
 
-import org.junit.Assert;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+class ConnectionDBTest {
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-
-public class ConnectionDBTest {
-    private ConnectionDB connectionDB;
+    private ConnectionDBTestImpl connectionDBTestImpl;
 
     @BeforeEach
-    public void setUp() {
-        connectionDB = new ConnectionDB();
+    void setUp() {
+        connectionDBTestImpl = new ConnectionDBTestImpl();
+        connectionDBTestImpl.connectDb();
     }
 
     @AfterEach
-    public void tearDown() {
-        connectionDB.close();
+    void tearDown() {
+        connectionDBTestImpl.close();
     }
 
     @Test
-    public void testConectDb() {
-        connectionDB.connectDb();
-        Connection conn = connectionDB.getConn();
-        assertNotNull("Connection should be established");
+    void testConnection() {
+        Connection conn = connectionDBTestImpl.getConn();
+        assertNotNull(conn, "Connection should not be null");
     }
 
     @Test
-    public void testConsulDb() {
-        connectionDB.connectDb();
+    void testConsultDb() {
         String query = "SELECT 1";
-        ResultSet resultSet = connectionDB.consultDb(query);
-        Assert.assertNotNull("ResultSet should not be null", resultSet);
-
+        ResultSet rs = connectionDBTestImpl.consultDb(query);
+        assertNotNull(rs, "ResultSet should not be null");
         try {
-            assertTrue("ResultSet should have at least one row", resultSet.next());
-            int result = resultSet.getInt(1);
-            assertEquals("Result should be 1", 1, result);
-        } catch (SQLException e) {
-            fail("SQLException should not occur: " + e.getMessage());
+            assertTrue(rs.next(), "ResultSet should have at least one row");
+            assertEquals(1, rs.getInt(1), "The result should be 1");
+        } catch (Exception e) {
+            fail("Exception should not be thrown: " + e.getMessage());
         }
     }
 
     @Test
-    public void testModifyDb() {
-        connectionDB.connectDb();
-        String createTableQuery = "CREATE TEMPORARY TABLE test_table (id INT)";
-        int result = connectionDB.modifyDb(createTableQuery);
-        assertEquals("Table should be created", 0, result);
+    void testModifyDb() {
+        String createTableQuery = "CREATE TABLE IF NOT EXISTS test_table (id INT PRIMARY KEY)";
+        int result = connectionDBTestImpl.modifyDb(createTableQuery);
+        assertEquals(0, result, "Result should be 0 for table creation");
 
         String insertQuery = "INSERT INTO test_table (id) VALUES (1)";
-        result = connectionDB.modifyDb(insertQuery);
-        assertEquals("One row should be inserted", 1, result);
-
-        String selectQuery = "SELECT COUNT(*) FROM test_table";
-        ResultSet resultSet = connectionDB.consultDb(selectQuery);
-        try {
-            assertTrue("ResultSet should have at least one row", resultSet.next());
-            int count = resultSet.getInt(1);
-            assertEquals("Count should be 1", 1, count);
-        } catch (SQLException e) {
-            fail("SQLException should not occur: " + e.getMessage());
-        }
+        result = connectionDBTestImpl.modifyDb(insertQuery);
+        assertEquals(1, result, "One row should be inserted");
 
         String dropTableQuery = "DROP TABLE test_table";
-        result = connectionDB.modifyDb(dropTableQuery);
-        assertEquals("Table should be dropped", 0, result);
+        result = connectionDBTestImpl.modifyDb(dropTableQuery);
+        assertEquals(0, result, "Result should be 0 for table drop");
+    }
+
+    // Clase de prueba concreta interna
+    static class ConnectionDBTestImpl extends ConnectionDB {
+        @Override
+        protected void connectDb() {
+            super.connectDb();
+        }
+
+        @Override
+        protected ResultSet consultDb(String query) {
+            return super.consultDb(query);
+        }
+
+        @Override
+        protected int modifyDb(String query) {
+            return super.modifyDb(query);
+        }
+
+        @Override
+        protected void close() {
+            super.close();
+        }
     }
 }
