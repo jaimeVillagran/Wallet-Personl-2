@@ -10,24 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="355ec4ee-875b-49bf-b0ad-de17683dec5a" name="Changes" comment="Mejora en archivos jps y controller">
+      <change afterPath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/transaction/service/TransactionServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/transaction/service/TransactionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/user/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/user/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/shared/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/shared/ConnectionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/DepositController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/DepositController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/WhitdrawController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/controller/WhitdrawController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/dao/TransactionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/transaction/service/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/dao/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/proyecto/wallet/user/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/balance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/balance.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/deposit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/deposit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/withdraw.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/withdraw.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/shared/ConnectionDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/proyecto/wallet/shared/ConnectionDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +26,7 @@
       <list>
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -77,30 +65,46 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ConnectionDBTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Smart Tomcat.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.20.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/WalletPersonal2/WalletPersonal2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ConnectionDBTest.executor": "Run",
+    "JUnit.TransactionServiceImplTest.executor": "Run",
+    "JUnit.TransactionServiceTest.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.Unnamed.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.20.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Desktop/Bootcamp JAVA/Modulo 6_Desarrollo de aplicaciones JEE con Spring Framework/Repositorio Juan Pablo/bootcamp_2024_muestra_app_consola-main/bootcamp_2024_muestra_app_consola-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.20">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cl.proyecto.wallet.user.service" />
+      <recent name="cl.proyecto.wallet.user.controller" />
+      <recent name="cl.proyecto.wallet.transaction.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TransactionServiceImplTest">
     <configuration default="true" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -139,10 +143,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.proyecto.wallet.transaction.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cl.proyecto.wallet.transaction.service" />
+      <option name="MAIN_CLASS_NAME" value="cl.proyecto.wallet.transaction.service.TransactionServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.proyecto.wallet.transaction.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cl.proyecto.wallet.transaction.service" />
+      <option name="MAIN_CLASS_NAME" value="cl.proyecto.wallet.transaction.service.TransactionServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="wallet" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.proyecto.wallet.user.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cl.proyecto.wallet.user.controller" />
+      <option name="MAIN_CLASS_NAME" value="cl.proyecto.wallet.user.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.proyecto.wallet.user.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cl.proyecto.wallet.user.service" />
+      <option name="MAIN_CLASS_NAME" value="cl.proyecto.wallet.user.service.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -237,11 +301,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Unnamed" />
+      <item itemvalue="JUnit.TransactionServiceImplTest" />
+      <item itemvalue="JUnit.TransactionServiceTest" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="JUnit.ConnectionDBTest" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.20" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransactionServiceImplTest" />
+        <item itemvalue="JUnit.TransactionServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.ConnectionDBTest" />
       </list>
     </recent_temporary>
@@ -271,6 +343,8 @@
       <workItem from="1716574835579" duration="26688000" />
       <workItem from="1716763928791" duration="5883000" />
       <workItem from="1716769860519" duration="21595000" />
+      <workItem from="1716846603552" duration="377000" />
+      <workItem from="1716846993505" duration="3964000" />
     </task>
     <task id="LOCAL-00001" summary="Actualizacion. Controller y modificacion de archivos jsp+">
       <option name="closed" value="true" />
